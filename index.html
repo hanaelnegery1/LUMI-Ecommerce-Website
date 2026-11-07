@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LUMI – Everyday Finds</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images//favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav">
+        <nav class="nav-menu" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Shop</a></li>
+            <li><a href="#categories">Categories</a></li>
+          </ul>
+        </nav>
+
+        <a href="#home" class="logo">LUMI</a>
+
+        <button
+          type="button"
+          id="cart-button"
+          class="cart-button"
+          aria-label="Open shopping cart"
+        >
+          <span class="cart-text">Cart</span>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow">LUMI &mdash; Everyday Finds</p>
+            <h1>Simple things, <em>chosen well.</em></h1>
+            <p class="lead">
+              Welcome to LUMI. Bags, watches, shoes and accessories that are
+              easy to love and easy to wear, every single day.
+            </p>
+            <a href="#products" class="btn">Shop the collection</a>
+          </div>
+          <div class="hero-frame">
+            <img
+              src="assets/images/hero.jpg"
+              alt="Bag, watch, sneakers and sunglasses from LUMI"
+            />
+            <span class="hero-badge">New season</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="perks" aria-label="Store benefits">
+        <ul class="container perks-list">
+          <li>Free shipping over $50</li>
+          <li>30-day easy returns</li>
+          <li>Secure checkout</li>
+          <li>Quality checked</li>
+        </ul>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Shop</p>
+              <h2>The Collection</h2>
+            </div>
+            <p id="result-count" class="result-count" aria-live="polite"></p>
+          </div>
+
+          <div class="shop">
+            <aside class="filters" aria-label="Search and filters">
+              <div class="filter-block">
+                <label for="search-input" class="filter-title">Search</label>
+                <input
+                  type="search"
+                  id="search-input"
+                  placeholder="Search by name"
+                />
+              </div>
+
+              <div class="filter-block" id="categories">
+                <h3 class="filter-title">Category</h3>
+                <div
+                  class="category-list"
+                  id="category-list"
+                  role="group"
+                  aria-label="Filter by category"
+                >
+                  <button type="button" class="chip active" data-category="All">
+                    All
+                  </button>
+                  <button type="button" class="chip" data-category="Bags">
+                    Bags
+                  </button>
+                  <button type="button" class="chip" data-category="Watches">
+                    Watches
+                  </button>
+                  <button type="button" class="chip" data-category="Shoes">
+                    Shoes
+                  </button>
+                  <button
+                    type="button"
+                    class="chip"
+                    data-category="Accessories"
+                  >
+                    Accessories
+                  </button>
+                </div>
+              </div>
+
+              <fieldset class="filter-block price-filter" id="price-filter">
+                <legend class="filter-title">Price</legend>
+                <label
+                  ><input type="radio" name="price" value="all" checked /> All
+                  prices</label
+                >
+                <label
+                  ><input type="radio" name="price" value="under50" /> Under
+                  $50</label
+                >
+                <label
+                  ><input type="radio" name="price" value="50to100" /> $50
+                  &ndash; $100</label
+                >
+                <label
+                  ><input type="radio" name="price" value="over100" /> Over
+                  $100</label
+                >
+              </fieldset>
+
+              <button type="button" id="clear-filters" class="clear-button">
+                Clear all filters
+              </button>
+            </aside>
+
+            <div class="shop-main">
+              <div id="product-grid" class="product-grid"></div>
+              <p id="no-results" class="no-results hidden">
+                Sorry, we couldn't find any products. Try a different search or
+                filter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <a href="#home" class="logo">LUMI</a>
+          <p class="footer-tagline">Simple things, chosen well.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Shop</a></li>
+          <li><a href="#categories">Categories</a></li>
+        </ul>
+        <p>&copy; 2026 LUMI – Everyday Finds. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div id="overlay" class="overlay"></div>
+
+    <aside id="cart" class="cart" aria-label="Shopping cart">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button
+          type="button"
+          id="close-cart"
+          class="close-button"
+          aria-label="Close cart"
+        >
+          Close &times;
+        </button>
+      </div>
+
+      <p id="empty-cart" class="empty-cart">
+        Your cart is empty. Add something you like!
+      </p>
+      <ul id="cart-items" class="cart-items"></ul>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cart-total">$0.00</strong>
+        </div>
+      </div>
+    </aside>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

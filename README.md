@@ -5,11 +5,7 @@
   <h1>LUMI – Everyday Finds</h1>
   <p><strong>Simple things, chosen well.</strong></p>
   <p>A clean and responsive e-commerce product interface for discovering everyday essentials.</p>
-
-  <p>
-    <a href="YOUR_LIVE_DEMO_URL">Live Demo</a>
-  </p>
-
+  
 </div>
 
 ---

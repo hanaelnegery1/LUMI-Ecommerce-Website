@@ -59,8 +59,8 @@ LUMI/
         ├── lumi-logo.png
         ├── hero.jpg
         └── products/
-            ├── product-1.jpg
-            ├── product-2.jpg
+           ├── product-1.webp
+            ├── product-2.webp
             └── ...
 ```
 
